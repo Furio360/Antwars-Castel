@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castle Game</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #castle1, #castle2 {
+      width: 100px;
+      height: 150px;
+      background-color: #996633;
+      position: relative;
+      text-align: center;
+    }
+
+    #castle1 button, #castle2 button {
+      margin-top: 10px;
+    }
+
+    .card {
+      width: 50px;
+      height: 80px;
+      background-color: #3498db;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="castle1">
+    <h2>Castle 1</h2>
+    <p>Level: <span id="level1">1</span></p>
+    <button onclick="upgradeCastle(1)">Upgrade</button>
+  </div>
+
+  <div id="castle2">
+    <h2>Castle 2</h2>
+    <p>Level: <span id="level2">1</span></p>
+    <button onclick="upgradeCastle(2)">Upgrade</button>
+  </div>
+
+  <div id="cards-container">
+    <h2>Your Cards</h2>
+    <div class="card" onclick="useCard(1)"></div>
+    <div class="card" onclick="useCard(2)"></div>
+    <div class="card" onclick="useCard(3)"></div>
+  </div>
+
+  <script>
+    let castle1Level = 1;
+    let castle2Level = 1;
+
+    function upgradeCastle(castleNumber) {
+      if (castleNumber === 1) {
+        castle1Level++;
+        document.getElementById('level1').innerText = castle1Level;
+      } else if (castleNumber === 2) {
+        castle2Level++;
+        document.getElementById('level2').innerText = castle2Level;
+      }
+    }
+
+    function useCard(cardNumber) {
+      if (cardNumber === 1) {
+        upgradeCastle(1);
+      } else if (cardNumber === 2) {
+        upgradeCastle(2);
+      } else if (cardNumber === 3) {
+        // Add logic for a different type of card
+        // For simplicity, let's just upgrade both castles
+        upgradeCastle(1);
+        upgradeCastle(2);
+      }
+    }
+  </script>
+
+</body>
+</html>
