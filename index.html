@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Castle Game</title>
   <style>
-  #castle1, #castle2 {
-  width: 200px;
-  height: 200px;
-  background-image: url('castel.png');
-  background-size: contain;
-  background-position: center;
-  position: relative;
-  text-align: center;
-  }
+    #castle1, #castle2 {
+      width: 200px;
+      height: 200px;
+      background-image: url('castel.png');
+      background-size: contain;
+      background-position: center;
+      position: relative;
+      text-align: center;
+    }
     body {
       display: flex;
       justify-content: space-around;
@@ -22,11 +22,9 @@
       margin: 0;
       background-color: #f0f0f0;
     }
-
     #castle1 button, #castle2 button {
       margin-top: 10px;
     }
-
     .card {
       width: 50px;
       height: 80px;
@@ -37,15 +35,14 @@
   </style>
 </head>
 <body>
-
   <div id="castle1">
     <h2></h2>
-    <p>Level: <span id="level1">1</span></p>
+    <span id="level1">1</span>
   </div>
 
   <div id="castle2">
     <h2></h2>
-    <p>Level: <span id="level2">1</span></p>
+    <span id="level2">1</span>
   </div>
 
   <div id="cards-container">
@@ -82,6 +79,5 @@
       }
     }
   </script>
-
 </body>
 </html>
