@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Castle Game</title>
   <style>
+  #castle1, #castle2 {
+  width: 200px;
+  height: 200px;
+  background-image: url('castel.png');
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  }
     body {
       display: flex;
       justify-content: space-around;
@@ -12,14 +21,6 @@
       height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
-    }
-
-    #castle1, #castle2 {
-      width: 100px;
-      height: 150px;
-      background-color: #996633;
-      position: relative;
-      text-align: center;
     }
 
     #castle1 button, #castle2 button {
